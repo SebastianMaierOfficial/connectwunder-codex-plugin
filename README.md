@@ -63,6 +63,13 @@ When a new plugin version is released, refresh the marketplace and reinstall the
 
 If an earlier installation used a local marketplace, remove that old installation first, then use the install commands above.
 
+```bash
+/Applications/ChatGPT.app/Contents/Resources/codex plugin remove connectwunder@connectwunder-official
+/Applications/ChatGPT.app/Contents/Resources/codex plugin marketplace remove connectwunder-official
+```
+
+Then run the commands in [Install](#install) again. This matters because the previous local marketplace used the same marketplace name, `connectwunder-official`.
+
 ## Privacy and access
 
 Every person authorizes ConnectWunder separately through OAuth. The plugin can access only the ConnectWunder workspace and permissions granted to that person. Never share a personal API key or OAuth session with a teammate.
