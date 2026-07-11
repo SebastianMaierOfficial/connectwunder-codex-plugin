@@ -1,0 +1,45 @@
+{
+  "name": "connectwunder",
+  "version": "0.1.0+codex.20260711103318",
+  "description": "Official ConnectWunder workspace plugin for Codex.",
+  "author": {
+    "name": "ConnectWunder",
+    "url": "https://app.connectwunder.com"
+  },
+  "homepage": "https://app.connectwunder.com/docs/oauth",
+  "repository": "https://github.com/SebastianMaierOfficial/connectwunder-codex-plugin",
+  "keywords": [
+    "connectwunder",
+    "workspace",
+    "crm",
+    "mcp",
+    "oauth"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "ConnectWunder",
+    "shortDescription": "Work with your ConnectWunder workspace in Codex.",
+    "longDescription": "Connect your authenticated ConnectWunder workspace to Codex for people, companies, boards, documents, meetings, activity, and calendar workflows.",
+    "developerName": "ConnectWunder",
+    "category": "Productivity",
+    "capabilities": [
+      "MCP",
+      "OAuth",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://app.connectwunder.com",
+    "privacyPolicyURL": "https://www.yonju.de/privacy",
+    "termsOfServiceURL": "https://app.connectwunder.com/legal/contracts/terms",
+    "brandColor": "#4F46E5",
+    "composerIcon": "./assets/connectwunder-icon.png",
+    "logo": "./assets/connectwunder-icon.png",
+    "logoDark": "./assets/connectwunder-icon.png",
+    "defaultPrompt": [
+      "Summarize recent activity in my ConnectWunder workspace.",
+      "Find people and companies related to a deal or project.",
+      "Create a board item from our agreed next steps."
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}

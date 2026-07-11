@@ -1,0 +1,20 @@
+{
+  "name": "connectwunder-official",
+  "interface": {
+    "displayName": "ConnectWunder Official"
+  },
+  "plugins": [
+    {
+      "name": "connectwunder",
+      "source": {
+        "source": "local",
+        "path": "./plugins/connectwunder"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
