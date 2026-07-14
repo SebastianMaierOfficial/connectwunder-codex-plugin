@@ -11,9 +11,15 @@ Use this skill when a user is new to ConnectWunder, asks what ConnectWunder can 
 
 Make the first session useful without making unsolicited changes to the workspace.
 
+## ConnectWunder access boundary
+
+Use the ConnectWunder MCP server exclusively for all workspace information and actions. Never use browser automation, the ConnectWunder web app, web search, or direct HTTP/API calls as a substitute for MCP access. The browser is only for the OAuth sign-in or re-authorization flow initiated by Codex.
+
+If MCP tools or resources are not available, do not continue the walkthrough by another route. Guide the user to install or reinstall the plugin and then start a new Codex task; if the plugin is present but OAuth is not connected, guide them through browser OAuth, workspace selection, and approval before retrying through MCP.
+
 ## First-session flow
 
-1. Confirm that ConnectWunder OAuth is connected. If it is not, tell the user to connect the plugin and select the intended workspace.
+1. Confirm that ConnectWunder OAuth is connected. If it is not, guide the user through the browser OAuth flow, including selecting the intended workspace, then resume through MCP.
 2. Read the available workspace context before giving advice:
    - Read `connectwunder://workspace/profile`.
    - Read `connectwunder://workspace/modules`.
