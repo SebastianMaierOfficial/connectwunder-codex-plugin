@@ -1,0 +1,4 @@
+interface:
+  display_name: "ConnectWunder Formular-Sites"
+  short_description: "Sichere Lead- und Supportformulare erstellen"
+  default_prompt: "Use $connectwunder-sites-intake to build and publish a secure lead form for my ConnectWunder board."

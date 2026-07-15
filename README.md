@@ -50,6 +50,7 @@ The plugin’s onboarding skill uses a read-first approach. It will not create, 
 - “Show open board items that need my attention.”
 - “Prepare a follow-up checklist from my next meeting.”
 - “Create a board item from these agreed next steps: …”
+- “Build and publish a secure lead form that creates people and items in my sales board.”
 
 ## Update or reinstall
 

@@ -13,7 +13,7 @@ Make the first session useful without making unsolicited changes to the workspac
 
 ## ConnectWunder access boundary
 
-Use the ConnectWunder MCP server exclusively for all workspace information and actions. Never use browser automation, the ConnectWunder web app, web search, or direct HTTP/API calls as a substitute for MCP access. The browser is only for the OAuth sign-in or re-authorization flow initiated by Codex.
+Use the ConnectWunder MCP server exclusively for all workspace information and actions. Never use browser automation, the ConnectWunder web app, web search, or direct HTTP/API calls as a substitute for MCP access. The browser is only for the OAuth sign-in or re-authorization flow initiated by Codex. This onboarding boundary does not cover explicitly requested, separately guarded deployed server integrations.
 
 If MCP tools or resources are not available, do not continue the walkthrough by another route. Guide the user to install or reinstall the plugin and then start a new Codex task; if the plugin is present but OAuth is not connected, guide them through browser OAuth, workspace selection, and approval before retrying through MCP.
 

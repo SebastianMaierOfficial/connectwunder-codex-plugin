@@ -1,9 +1,10 @@
 # ConnectWunder Skill Roadmap
 
-The initial release contains two skills:
+The current release contains three skills:
 
 - `connectwunder-workspace`: safe general use of workspace tools.
 - `connectwunder-onboarding`: a read-first first-session orientation.
+- `connectwunder-sites-intake`: secure Sites-based lead, contact, support, and issue-report forms that submit server-side through the public API.
 
 The following additions are the highest-value next skills, based on the currently exposed MCP capabilities.
 

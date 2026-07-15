@@ -10,7 +10,7 @@ Use the ConnectWunder MCP tools when a request concerns the authenticated Connec
 ## Mandatory MCP boundary
 
 - Perform every ConnectWunder workspace operation through the `connectwunder` MCP server: reads, searches, summaries, and mutations alike.
-- Do **not** control, inspect, scrape, or automate the ConnectWunder web app with a browser, Chrome, web search, direct HTTP calls, or any other fallback. Do not use those routes to work around unavailable MCP tools.
+- Do **not** control, inspect, scrape, or automate the ConnectWunder web app with a browser, Chrome, web search, direct HTTP calls, or any other fallback. Do not use those routes to work around unavailable MCP tools. This applies to Codex's own workspace operations; a more-specific ConnectWunder integration skill may author an explicitly requested deployed server integration with its own guarded API contract.
 - A browser is permitted only to complete, resume, or re-authorize the ConnectWunder OAuth flow that Codex initiates. Once OAuth is complete, return to the MCP tools for all workspace work.
 - If the MCP server, its tools, or its workspace resources are unavailable, stop the requested workspace operation and guide the user through recovery below. Do not attempt an alternative route.
 
