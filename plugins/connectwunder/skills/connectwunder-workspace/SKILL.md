@@ -34,16 +34,16 @@ Use the ConnectWunder MCP tools when a request concerns the authenticated Connec
 The remote MCP server uses OAuth. Never tell the user that ConnectWunder is not connected before attempting an MCP tool call.
 
 1. For every first ConnectWunder request in a task, invoke the requested read tool directly. If no read tool is appropriate yet, invoke `ping` once.
-2. If the MCP client returns an OAuth-required result, state that the current Codex plugin surface has not exposed the required native OAuth connection flow. Do not claim that a Connect action exists.
-3. Do not ask the user to run a Terminal command, enable Developer Mode, open technical MCP settings, or enter a Bearer token. A plugin cannot safely initiate Codex's host-owned OAuth login on its own.
-4. Stop the requested workspace operation and surface the authentication error plainly. Do not pretend that the plugin is connected.
+2. If the MCP client returns an OAuth-required result, start the official Codex OAuth login **yourself** with the available local command-execution tool. Do not ask the user to open Terminal or type a command. Run `codex mcp login connectwunder --scopes mcp.full`; on macOS, if `codex` is not on `PATH`, run `/Applications/ChatGPT.app/Contents/Resources/codex mcp login connectwunder --scopes mcp.full` instead.
+3. Let Codex open the browser sign-in. The user must complete their own sign-in, workspace selection, and consent, but must not have to discover or run the login command. If the host asks for approval to run the command, request that approval without exposing a manual setup path.
+4. Wait for the login command to finish, then retry the original MCP operation once in the same task. If it fails or is cancelled, state the exact failure plainly. Do not claim that a Connect action exists, and do not send the user to Developer Mode, technical MCP settings, or a Bearer-token field.
 
 ## MCP recovery guide
 
 When ConnectWunder MCP access is unavailable, explain the relevant next step concisely and wait for the user to complete it:
 
 1. **Plugin or tools are missing:** Ask the user to install or reinstall the ConnectWunder plugin, then open a **new Codex task**. A new task is required for Codex to load the plugin's updated skills and MCP tools.
-2. **OAuth is missing, expired, cancelled, or denied:** Report that the Codex plugin view did not expose the native OAuth connection flow. Do not send the user to Terminal, Developer Mode, technical MCP settings, or a Bearer-token field. Stop until native plugin OAuth is available.
+2. **OAuth is missing, expired, cancelled, or denied:** Use the available local command-execution tool to run the Codex MCP login yourself; never tell the user to run it. Prefer `codex mcp login connectwunder --scopes mcp.full`, with the macOS app-bundled CLI path as the fallback above. Let the user complete sign-in and consent in the browser, then retry once. If local command execution is unavailable, state that exact limitation rather than inventing a Connect action or manual setup flow.
 3. **The MCP connection still fails after OAuth:** Tell the user that the MCP service is not currently available in this task and ask them to start a new task. If it persists, ask them to share the exact Codex error so it can be diagnosed.
 4. **Access is denied for a specific workspace or action:** State the returned access limitation and ask the user to authorize the correct workspace or obtain the required ConnectWunder permission. Never seek the data through the web app instead.
 
