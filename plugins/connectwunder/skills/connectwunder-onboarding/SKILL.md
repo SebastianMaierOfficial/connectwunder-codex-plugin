@@ -15,11 +15,11 @@ Make the first session useful without making unsolicited changes to the workspac
 
 Use the ConnectWunder MCP server exclusively for all workspace information and actions. Never use browser automation, the ConnectWunder web app, web search, or direct HTTP/API calls as a substitute for MCP access. The browser is only for the OAuth sign-in or re-authorization flow initiated by Codex. This onboarding boundary does not cover explicitly requested, separately guarded deployed server integrations.
 
-If MCP tools or resources are not available, do not continue the walkthrough by another route. Guide the user to install or reinstall the plugin and then start a new Codex task; if the plugin is present but OAuth is not connected, guide them through browser OAuth, workspace selection, and approval before retrying through MCP.
+If MCP tools or resources are not available, do not continue the walkthrough by another route. For a missing OAuth connection, invoke `ping` once so the host can show its native **Connect** action. Do not instruct the user to enable Developer Mode, open technical MCP settings, or enter a Bearer token.
 
 ## First-session flow
 
-1. Confirm that ConnectWunder OAuth is connected. If it is not, guide the user through the browser OAuth flow, including selecting the intended workspace, then resume through MCP.
+1. Before discussing connection state, invoke `get_workspace_profile` or `ping`. If the host reports OAuth is required, wait for its native **Connect** action; after completion, retry the same tool once. If no host action appears, surface the exact returned error instead of generic login instructions.
 2. Read the available workspace context before giving advice:
    - Read `connectwunder://workspace/profile`.
    - Read `connectwunder://workspace/modules`.

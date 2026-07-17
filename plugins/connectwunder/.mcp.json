@@ -3,7 +3,9 @@
     "connectwunder": {
       "type": "http",
       "url": "https://mcp.connectwunder.com/mcp",
-      "oauth_resource": "https://mcp.connectwunder.com/mcp"
+      "oauth_resource": "https://mcp.connectwunder.com/mcp",
+      "auth": "oauth",
+      "scopes": ["mcp.full"]
     }
   }
 }

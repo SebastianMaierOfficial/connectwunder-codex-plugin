@@ -8,11 +8,11 @@ It provides the hosted ConnectWunder MCP server for people, companies, boards, d
 
 All ConnectWunder workspace reads and changes happen through the hosted ConnectWunder MCP server. Codex must not control or scrape the ConnectWunder web app, use browser automation, call an alternative API, or use web search as a fallback.
 
-The browser is used only for OAuth sign-in, re-authorization, and workspace selection. If the MCP tools are not available, Codex guides the user to install or reinstall the plugin and start a new Codex task. If OAuth is missing or expired, Codex guides the user through OAuth before retrying the operation through MCP.
+The browser is used only for OAuth sign-in, re-authorization, and workspace selection. When OAuth is required, Codex must first invoke the requested ConnectWunder MCP tool (or `ping`), so that the host can display its native **Connect** action. It must not send users to Developer Mode, technical MCP settings, or a manual Bearer-token field.
 
 ## Authentication
 
-On first use, Codex opens the ConnectWunder OAuth flow. Sign in, select the intended workspace, and approve access. The plugin uses the hosted streamable HTTP MCP endpoint at `https://mcp.connectwunder.com/mcp`. After an installation or reinstall, start a new Codex task so its MCP tools are available.
+On first use, invoke a ConnectWunder request. Codex should show its native **Connect** flow; sign in, select the intended workspace, and approve access. The plugin uses the hosted streamable HTTP MCP endpoint at `https://mcp.connectwunder.com/mcp`. After this plugin update, start a new Codex task so its updated skills and MCP configuration are loaded.
 
 ## First prompt
 
