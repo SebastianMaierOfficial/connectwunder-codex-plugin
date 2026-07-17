@@ -34,16 +34,16 @@ Use the ConnectWunder MCP tools when a request concerns the authenticated Connec
 The remote MCP server uses OAuth. Never tell the user that ConnectWunder is not connected before attempting an MCP tool call.
 
 1. For every first ConnectWunder request in a task, invoke the requested read tool directly. If no read tool is appropriate yet, invoke `ping` once.
-2. If the MCP client returns an OAuth-required result, let the host present its native **Connect** action. Do not send the user to Developer Mode, MCP settings, or a manual Bearer-token field.
-3. After the user completes the host-provided Connect flow, retry the original MCP operation once.
-4. If the host returns an OAuth error but does not expose a Connect action or link, state that exact failure plainly. Do not replace it with generic instructions to "start OAuth in the browser".
+2. If the MCP client returns an OAuth-required result, explain that the current Codex plugin surface does not render an in-chat Connect action. Do not claim that it does.
+3. Ask the user to complete the official one-time Codex OAuth login in Terminal: `/Applications/ChatGPT.app/Contents/Resources/codex mcp login connectwunder --scopes mcp.full`. This opens the browser sign-in and does not require Developer Mode or a Bearer token.
+4. After the login command completes, retry the original MCP operation once in a new Codex task. If the command fails, report its exact error.
 
 ## MCP recovery guide
 
 When ConnectWunder MCP access is unavailable, explain the relevant next step concisely and wait for the user to complete it:
 
 1. **Plugin or tools are missing:** Ask the user to install or reinstall the ConnectWunder plugin, then open a **new Codex task**. A new task is required for Codex to load the plugin's updated skills and MCP tools.
-2. **OAuth is missing, expired, cancelled, or denied:** Invoke `ping` or the requested read tool once so the host can render its native Connect action. If no action appears, report the exact MCP authentication error and stop; do not invent a browser-login workaround.
+2. **OAuth is missing, expired, cancelled, or denied:** Report that the Codex plugin view has no in-chat Connect action and give the official one-time login command: `/Applications/ChatGPT.app/Contents/Resources/codex mcp login connectwunder --scopes mcp.full`. This command opens the browser sign-in without Developer Mode. After it succeeds, ask the user to start a new Codex task and retry.
 3. **The MCP connection still fails after OAuth:** Tell the user that the MCP service is not currently available in this task and ask them to start a new task. If it persists, ask them to share the exact Codex error so it can be diagnosed.
 4. **Access is denied for a specific workspace or action:** State the returned access limitation and ask the user to authorize the correct workspace or obtain the required ConnectWunder permission. Never seek the data through the web app instead.
 

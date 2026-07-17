@@ -15,11 +15,11 @@ Make the first session useful without making unsolicited changes to the workspac
 
 Use the ConnectWunder MCP server exclusively for all workspace information and actions. Never use browser automation, the ConnectWunder web app, web search, or direct HTTP/API calls as a substitute for MCP access. The browser is only for the OAuth sign-in or re-authorization flow initiated by Codex. This onboarding boundary does not cover explicitly requested, separately guarded deployed server integrations.
 
-If MCP tools or resources are not available, do not continue the walkthrough by another route. For a missing OAuth connection, invoke `ping` once so the host can show its native **Connect** action. Do not instruct the user to enable Developer Mode, open technical MCP settings, or enter a Bearer token.
+If MCP tools or resources are not available, do not continue the walkthrough by another route. For a missing OAuth connection, invoke `ping` once. The current Codex plugin view does not show an in-chat Connect action, so do not claim that it does. Give the official one-time Terminal login command instead: `/Applications/ChatGPT.app/Contents/Resources/codex mcp login connectwunder --scopes mcp.full`. It opens the browser sign-in and does not require Developer Mode or a Bearer token.
 
 ## First-session flow
 
-1. Before discussing connection state, invoke `get_workspace_profile` or `ping`. If the host reports OAuth is required, wait for its native **Connect** action; after completion, retry the same tool once. If no host action appears, surface the exact returned error instead of generic login instructions.
+1. Before discussing connection state, invoke `get_workspace_profile` or `ping`. If OAuth is required, explain that the Codex plugin view has no in-chat Connect action and give the official one-time login command above. After it completes, ask the user to start a new Codex task and retry the same tool once.
 2. Read the available workspace context before giving advice:
    - Read `connectwunder://workspace/profile`.
    - Read `connectwunder://workspace/modules`.
