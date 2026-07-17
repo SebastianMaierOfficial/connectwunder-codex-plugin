@@ -38,7 +38,8 @@
     "defaultPrompt": [
       "Summarize recent activity in my ConnectWunder workspace.",
       "Find people and companies related to a deal or project.",
-      "Create a board item from our agreed next steps."
+      "Create a board item from our agreed next steps.",
+      "Interview me and build a living Brand OS from my existing designs or visual inspiration."
     ]
   },
   "mcpServers": "./.mcp.json"

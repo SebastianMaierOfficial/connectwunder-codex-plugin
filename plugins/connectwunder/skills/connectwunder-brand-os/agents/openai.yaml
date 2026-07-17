@@ -1,0 +1,4 @@
+interface:
+  display_name: "ConnectWunder Brand OS"
+  short_description: "Ein lebendes Brand OS mit ConnectWunder aufbauen"
+  default_prompt: "Use $connectwunder-brand-os to interview me and build a living Brand OS in my ConnectWunder workspace."

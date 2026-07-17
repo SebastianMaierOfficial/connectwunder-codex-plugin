@@ -1,10 +1,11 @@
 # ConnectWunder Skill Roadmap
 
-The current release contains three skills:
+The current release contains four skills:
 
 - `connectwunder-workspace`: safe general use of workspace tools.
 - `connectwunder-onboarding`: a read-first first-session orientation.
 - `connectwunder-sites-intake`: secure Sites-based lead, contact, support, and issue-report forms that submit server-side through the public API.
+- `connectwunder-brand-os`: an interview-led workflow that inventories existing designs or inspiration, creates one AI-ready ConnectWunder master document, publishes a visual Brand OS Gallery, and maintains decisions over time.
 
 The following additions are the highest-value next skills, based on the currently exposed MCP capabilities.
 
