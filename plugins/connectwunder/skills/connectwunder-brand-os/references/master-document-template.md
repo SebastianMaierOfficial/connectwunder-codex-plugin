@@ -33,6 +33,7 @@ Gallery: [URL and access level]
 ### Surfaces, borders, radii, and shadows
 ### Logos and identifiers
 ### Photography and graphics
+[Record the primary subject, focal point, crop rule, and safe-area constraints for images used responsively.]
 ### Motion, interaction, and haptics
 
 ## Mode rules

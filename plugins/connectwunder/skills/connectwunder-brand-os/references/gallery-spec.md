@@ -104,6 +104,8 @@ Consider the Gallery ready when:
 - modes feel related but appropriately different;
 - typography works in the real audience language;
 - spacing and alignment appear intentional;
+- display headlines have been checked against visible glyph shapes rather than line-height alone;
+- every cropped image has a tested focal point and keeps its primary subject visible at relevant widths;
 - mobile and dense UI cases remain usable;
 - resolved alternatives are gone;
 - the build succeeds;

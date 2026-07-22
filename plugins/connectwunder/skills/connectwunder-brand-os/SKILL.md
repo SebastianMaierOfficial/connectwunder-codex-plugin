@@ -137,12 +137,15 @@ Document negative rules. State what the system must not produce, especially comm
 ### 6. Build the visual Gallery
 
 Read [references/gallery-spec.md](references/gallery-spec.md) before implementation.
+Read [references/visual-quality-gate.md](references/visual-quality-gate.md) before approving or publishing any visual output.
 
 Create the Gallery after the first useful inventory and design-DNA hypothesis exist. It must show the current system, not merely list rules.
 
 Use real or safely redacted evidence where possible. Include a language switch and typographic stress tests when the brand serves more than one language or uses diacritics, long compound words, or non-Latin scripts.
 
 Link the deployed Gallery from the master document. Record its current version and access level.
+
+Do not confirm a layout from source code, tokens, or one static composition alone. Render the real content after fonts and images load, then run the visual quality gate at the relevant desktop, tablet, and mobile widths. A visibly uneven display headline or a crop that hides its primary subject blocks approval.
 
 If Sites is unavailable, keep the visual inventory inside ConnectWunder and mark the Gallery as pending. Do not substitute an unapproved hosting provider.
 
