@@ -1,6 +1,6 @@
 {
   "name": "connectwunder",
-  "version": "0.1.0+codex.20260717082545",
+  "version": "0.1.0+codex.20260724051925",
   "description": "Official ConnectWunder workspace plugin for Codex.",
   "author": {
     "name": "ConnectWunder",
@@ -19,7 +19,7 @@
   "interface": {
     "displayName": "ConnectWunder",
     "shortDescription": "Work with your ConnectWunder workspace in Codex.",
-    "longDescription": "Connect your authenticated ConnectWunder workspace to Codex for people, companies, boards, documents, meetings, activity, and calendar workflows.",
+    "longDescription": "Connect your authenticated ConnectWunder workspace to Codex for people, companies, boards, documents, meetings, activity, calendar workflows, and websites powered by public board data.",
     "developerName": "ConnectWunder",
     "category": "Productivity",
     "capabilities": [
@@ -39,7 +39,8 @@
       "Summarize recent activity in my ConnectWunder workspace.",
       "Find people and companies related to a deal or project.",
       "Create a board item from our agreed next steps.",
-      "Interview me and build a living Brand OS from my existing designs or visual inspiration."
+      "Interview me and build a living Brand OS from my existing designs or visual inspiration.",
+      "Turn my spreadsheet into a ConnectWunder board and build a website that stays updated from its public JSON feed."
     ]
   },
   "mcpServers": "./.mcp.json"

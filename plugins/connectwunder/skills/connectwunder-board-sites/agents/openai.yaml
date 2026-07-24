@@ -1,0 +1,13 @@
+interface:
+  display_name: "ConnectWunder Board Sites"
+  short_description: "Websites aus öffentlichen Board-Daten bauen"
+  default_prompt: "Use $connectwunder-board-sites to structure my data in a ConnectWunder board and build a website that stays updated from its public JSON feed."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "connectwunder"
+      description: "ConnectWunder workspace and public board feed configuration"
+      transport: "streamable_http"
+      url: "https://mcp.connectwunder.com/mcp"
+policy:
+  allow_implicit_invocation: true

@@ -2,7 +2,7 @@
 
 The official ConnectWunder plugin connects Codex to an OAuth-authorized ConnectWunder workspace.
 
-It provides the hosted ConnectWunder MCP server for people, companies, boards, documents, meetings, communication vault, activity, and calendar workflows. The bundled skills add safe workspace guidance, a read-first onboarding flow for new users, and secure Sites-based intake forms. Workspace operations by Codex remain MCP-only; a deployed intake form may call the public API only from its guarded server route.
+It provides the hosted ConnectWunder MCP server for people, companies, boards, documents, meetings, communication vault, activity, and calendar workflows. The bundled skills add safe workspace guidance, a read-first onboarding flow, secure Sites-based intake forms, and websites powered by public board JSON feeds. Workspace operations by Codex remain MCP-only; deployed Sites integrations may use only the narrowly documented public runtime contracts.
 
 ## How Codex accesses ConnectWunder
 
@@ -17,6 +17,8 @@ The hosted streamable HTTP MCP endpoint is `https://mcp.connectwunder.com/mcp`. 
 ## First prompt
 
 After connecting, start with: “Give me a short overview of my ConnectWunder workspace and its enabled modules.”
+
+To create a board-backed website, try: “Read this spreadsheet, propose a board schema, set it up in ConnectWunder, and build a website that stays updated from the public JSON feed.”
 
 ## Development
 
